@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hed {
+    background-color: orange;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user {
+    background-color: aliceblue;
+    width: 500px;
+    height: auto;
+    max-height: 600px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#user h1 {
+    color: rgb(13, 35, 121);
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    color: #333;
+    margin: 10px ;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px;
+}
+
+#btn button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn button:hover {
+    background-color: #4b45a0;
+}
+input[type="text"] {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+}
+input[type="number"] {
+    height: 46px;
+    width: 251px;
+    font-size: 20px;
+}
+
+
+div#btn {
+    display: flex
+;
+    justify-content: space-around;
+}

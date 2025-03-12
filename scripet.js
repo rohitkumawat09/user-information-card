@@ -5,8 +5,9 @@ let number = document.getElementById("number");
 let state = document.getElementById("state");
 let city = document.getElementById("city");
 let village = document.getElementById("village");
-let btn = document.getElementById("btn");
-let btnClear = document.getElementById("btnClear");
+let btnDiv = document.querySelector("#btn");
+let btn = document.querySelector("#btn button");
+let btnClear = document.querySelector("#btnClear button");
 
 
 btn.addEventListener("click", () => {
@@ -72,11 +73,19 @@ btn.addEventListener("click", () => {
     btn2.innerHTML = "Submit";
 
 
-    btn.innerHTML = "";
-    btn.append(btn2);
+    btn.remove();
+    btnDiv.append(btn2);
 
 
     btn2.addEventListener("click", () => {
+
+
+        if (nameInput.value === "" || lastNameInput.value === "" || countryInput.value === "" ||
+            numberInput.value === "" || stateInput.value === "" || cityInput.value === "" || villageInput.value === "") {
+
+            alert("Please fill in all fields.");
+            return;
+        }
         localStorage.setItem("name", nameInput.value);
 
         localStorage.setItem("lastName", lastNameInput.value);
@@ -86,9 +95,12 @@ btn.addEventListener("click", () => {
         localStorage.setItem("city", cityInput.value);
         localStorage.setItem("village", villageInput.value);
 
+        btnClear.style.display = "block";
+        btn2.remove();
         alert("Your details saved");
 
-         nameInput.value = "";
+
+        nameInput.value = "";
         lastNameInput.value = "";
         countryInput.value = "";
         numberInput.value = "";
@@ -111,8 +123,8 @@ btnClear.addEventListener("click", () => {
     localStorage.removeItem("city");
     localStorage.removeItem("village");
 
- 
+
 
     alert("All data Clear ");
-    
+
 });

@@ -44,6 +44,7 @@ hr {
 }
 
 #btn button {
+    /* display: none; */
     background-color: #4CAF50;
     color: white;
     font-size: 20px;
@@ -52,6 +53,9 @@ hr {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+#btnClear button{
+    display: none;
 }
 
 #btn button:hover {
@@ -74,3 +78,5 @@ div#btn {
 ;
     justify-content: space-around;
 }
+
+
